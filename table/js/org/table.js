@@ -1,3 +1,4 @@
 function test(){
-	alert($("h1").text());
+	$("#kino").text("kinokino");
+	console.log("testだよ");
 }
