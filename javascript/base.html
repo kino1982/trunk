@@ -8,6 +8,7 @@
 		<script src="js/org/listbox.js"></script>
 		<script src="js/org/var.js"></script>
 		<script src="js/org/textbox.js"></script>
+		<script src="js/org/json.js"></script>
 	</head>
 	<body>
 		<h1>jquery</h1>
@@ -24,7 +25,9 @@
 			var id = '#kino2'
 			write_listbox(text_ary,value_ary,id);
 			var text_id = '#text1';
-			write_textbox(text_id,'name','testだよ')	
+			write_textbox(text_id,'name','testだよ')
+			var url_str = 'json/hoge.json';
+			read_json(url_str);	
 		</script>
 	</body>
 </html>
