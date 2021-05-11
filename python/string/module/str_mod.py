@@ -8,7 +8,7 @@
 def zero_pad(str,zero_num):
 	#********************************
 	# 数字の文字列を右寄せで指定の
-	# 指定の文字数分０埋めする。
+	# 文字数分０埋めする。
 	# 
 	# str:数字の文字列
 	# zero_num:0埋めする文字数
@@ -16,3 +16,14 @@ def zero_pad(str,zero_num):
 	s_zero = str.zfill(zero_num)
 
 	return s_zero
+
+def slice_str(str,st_num,en_num):
+	#********************************
+	# 文字列の指定部分を抜き出す。
+	# 
+	# str:文字列
+	# st_num:文字列の開始位置
+	# en_num:文字列の終了位置
+	#********************************
+
+	return str[st_num:en_num]	
