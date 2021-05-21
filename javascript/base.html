@@ -20,6 +20,8 @@
 
 		<div id='text1'></div>
 
+		<p id='time1'><p>
+
 		<script>
 			var hoge = [[1,2,3],[4,5,6]];
 			write_table(hoge);
@@ -30,7 +32,8 @@
 			var url_str = 'json/hoge.json';
 			read_json(url_str);
 			console.log(date_cal("202105210000", 6));
-
+			time_now('#time1');
+			setInterval('time_now("#time1")',1000);
 		</script>
 	</body>
 </html>

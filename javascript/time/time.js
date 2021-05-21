@@ -40,3 +40,18 @@ function date_cal(date_str, hour_str){
 
 	return out_time_str;
 }
+
+function time_now(id){
+	//******************************* 
+	// 現在時刻を指定したidの箇所に
+	// 表示。
+	// jqueryを使用。
+	//
+	// id:html中のid
+	//*******************************
+
+	var now = new Date();
+
+	$(id).text(now.toLocaleString());
+
+}
