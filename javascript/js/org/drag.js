@@ -17,7 +17,7 @@ function drag_and_get_position(id, base_id){
 				var top_t = ui.position.top - $(base_id).position().top;
 				var top_l = ui.position.left - $(base_id).position().left;
                                 alert('top:' + top_t + 'left:' + top_l);
-
+				window.location.href = "https://www.jma.go.jp/jma/index.html";
                         }
                 })
         })
