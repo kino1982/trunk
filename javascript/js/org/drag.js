@@ -1,22 +1,24 @@
-$(function() {
-        // #div1をdrag可能に
-	$("#div1").draggable({
-		helper:'clone',
-		start:function(){
-				$(this).hide();
-		},
-		stop: function(e, ui) {
-			$(this).show()
-			$("#test99").append("<p>テストだよ</p>");
-		}
-	});
-});
+function drag_and_get_position(id, base_id){
+	//***********************************
+	// 要素をドラッグした時に起点とする
+	// 要素からの相対距離を求める。
+	//
+	// id:ドラッグするid
+	// base_id:起点とする要素のid
+	//***********************************
+        $(function() {
+                $(id).draggable({
+			helper:'clone',
+                	start:function(){
+                                $(this).hide();
+                	},
+                        stop: function(e, ui) {
+				$(this).show();
+				var top_t = ui.position.top - $(base_id).position().top;
+				var top_l = ui.position.left - $(base_id).position().left;
+                                alert('top:' + top_t + 'left:' + top_l);
 
-$(function() {
-	$('#test').draggable({
-		stop: function(e, ui) {
-			alert('top:' + ui.position.top + 'left:' + ui.position.left);
-			
-		}
-	})
-})
+                        }
+                })
+        })
+}
