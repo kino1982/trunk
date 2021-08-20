@@ -9,7 +9,7 @@ function date_cal(date_str, hour_str){
 	// の文字列で返す。
 	//
 	// date_str:yyyymoddhhmiの文字列
-	// hh:加減する時間
+	// hour_str:加減する時間
 	//**************************************
 
 	yy = date_str.substr(0,4);
