@@ -13,3 +13,9 @@ c = np.array([[0,0,0],[0,0,0]])
 d = np.maximum(b,c)
 
 print(d)
+
+#0行列を作成
+
+e = np.zeros((3,3))
+
+print(e)
