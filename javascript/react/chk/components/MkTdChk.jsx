@@ -4,7 +4,7 @@ export const MkTdChk = (props) => {
 	
 	return (
 		<>
-			<td>{td_data}<br />test</td>
+			<td dangerouslySetInnerHTML={{ __html:td_data}}></td>
 		</>
 	);
 };
