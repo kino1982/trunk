@@ -8,9 +8,6 @@ export const MkTrChk = (props) => {
 	
 	const [value, setValue] = useState(false);
 	
-	console.log("test1")
-	console.log(value);
-	
 	let bgc = "";
 	
 	if (value){
@@ -18,9 +15,6 @@ export const MkTrChk = (props) => {
 	}else{
 		bgc = "white";
 	}
-	
-	console.log("test2")
-	console.log(value);
 	
 	return (
 		<>
