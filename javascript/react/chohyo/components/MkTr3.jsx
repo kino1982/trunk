@@ -7,7 +7,6 @@ export const MkTr3 = (props) => {
 	
 	const th_data1 = props.th_data1;
 	const th_data2 = props.th_data2;
-	const col_num = props.col_num;
 	const row_num = props.row_num;
 	const td_data_ary = props.td_data_ary;
 	
@@ -20,7 +19,7 @@ export const MkTr3 = (props) => {
 	
 	return (
 		<>
-				<MkTh2 th_data={th_data1} col_num={col_num} row_num={row_num}></MkTh2>
+				<MkTh2 th_data={th_data1} col_num="1" row_num={row_num}></MkTh2>
 				<MkTh th_data={th_data2}></MkTh>
 				{td_ary}
 		</>

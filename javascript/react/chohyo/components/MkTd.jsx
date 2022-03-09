@@ -1,8 +1,10 @@
-import kino from "../css/td.module.css"
+import kino from "../css/td.module.css";
 
 export const MkTd = (props) => {
 
 	const td_data = props.td_data;
+	const td_bline_sw = props.td_bline_sw;
+	const td_rline_sw = props.td_rline_sw;
 	
 	let kino_color = kino.color1;
 	
@@ -11,6 +13,10 @@ export const MkTd = (props) => {
 	}else{
 		kino_color = kino.color2;
 	};
+	
+	if(td_bline_sw){
+		kino_color = kino_color + " " + kino.bline;
+	}
 	
 	return (
 		<>

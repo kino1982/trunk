@@ -1,12 +1,15 @@
-import cc from "../css/th.module.css"
-
 export const MkTh = (props) => {
 
 	const th_data = props.th_data;
 	
+	const thstyle = {
+		backgroundColor: "green",
+		border: "1px solid black"
+	}
+	
 	return (
 		<>
-			<th>{th_data}</th>
+			<th style={thstyle}>{th_data}</th>
 		</>
 	);
 };
