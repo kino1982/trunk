@@ -1,14 +1,16 @@
 import {useState} from "react";
 import { useContext } from "react";
-import {ColoredMessage} from "./components/ColoredMessage.jsx";
+
+import { AreaNumContext } from "./provider/AreaNumProvider";
+import { ElemContext } from "./provider/ElemProvider";
+import { FlvContext } from "./provider/FlvProvider";
+import { MemberContext } from "./provider/MemberProvider";
+import { InitTimeContext } from "./provider/InitTimeProvider";
+
 import {MkTbody} from "./components/MkTbody.jsx";
 import {MkTr} from "./components/MkTr.jsx";
-import {MkSelectBox} from "./components/MkSelectBox.jsx";
+import {MkForm} from "./components/MkForm.jsx";
 import {MkP} from "./components/MkP.jsx";
-import { AreaNumContext } from "./components/AreaNumProvider";
-import { ElemContext } from "./components/ElemProvider";
-import { FlvContext } from "./components/FlvProvider";
-import { InitTimeContext } from "./components/InitTimeProvider";
 import { MkThead } from "./components/MkThead.jsx";
 
 
@@ -19,7 +21,14 @@ export const App = () => {
 	const {big_area_num} = useContext(AreaNumContext);
 	const {elem} = useContext(ElemContext);
 	const {flv} = useContext(FlvContext);
+	const {member} = useContext(MemberContext);
 	const {init_time} = useContext(InitTimeContext);
+	
+	const style = {
+		marginTop:"1em",
+		marginBottom:"1em",
+		borderCollapse:"collapse"
+	}
 	
 	let kino_data = {
 						"0000":{
@@ -57,13 +66,11 @@ export const App = () => {
 	return (
 	
 		<>
-			<h1 style = {{color : "red"}}>hello world</h1>
-			<MkSelectBox></MkSelectBox>
+			<MkForm></MkForm>
 			<MkP></MkP>
 			<p>{file_name}</p>
 			
-			<table>
-				
+			<table style={style}>
 				<MkThead init_time={init_time} model="msm" elem="R3"></MkThead>
 				<MkTbody big_area_num={big_area_num} tbody_datas={tbody_datas}></MkTbody>
 			</table>

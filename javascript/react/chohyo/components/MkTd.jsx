@@ -1,26 +1,38 @@
-import kino from "../css/td.module.css";
-
 export const MkTd = (props) => {
 
 	const td_data = props.td_data;
-	const td_bline_sw = props.td_bline_sw;
-	const td_rline_sw = props.td_rline_sw;
+	const td_lineb_sw = props.td_bline_sw;
+	const td_liner_sw = props.td_rline_sw;
 	
-	let kino_color = kino.color1;
+	let cell_color = "";
+	let class_name_str = "";
+	
+	const style = {
+		marginTop: "1em",
+		marginBottom: "1em",
+		borderCollapse: "collapse",
+		fontSize: "0.9em",
+		border: "solid #ffffff 1px",
+		padding: "0.1em 0.3em 0.1em 0.3em",
+		whiteSpace: "nowrap",
+		lineHeight: "1.4em",
+		textAlign: "center",
+		padding: "0.1em"
+	}
 	
 	if (td_data > 100){
-		kino_color = kino.color1;
+		cell_color = "";
 	}else{
-		kino_color = kino.color2;
+		cell_color = "";
 	};
 	
-	if(td_bline_sw){
-		kino_color = kino_color + " " + kino.bline;
+	if(td_lineb_sw){
+		style["borderBottom"] = "solid #a0a0a0 1px";
 	}
 	
 	return (
 		<>
-			<td className={kino_color}>{td_data}</td>
+			<td style={style}>{td_data}</td>
 		</>
 	);
 };

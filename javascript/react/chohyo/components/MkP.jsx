@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { AreaNumContext } from "./AreaNumProvider";
-import { ElemContext } from "./ElemProvider";
-import { FlvContext } from "./FlvProvider";
+import { AreaNumContext } from "../provider/AreaNumProvider";
+import { ElemContext } from "../provider/ElemProvider";
+import { FlvContext } from "../provider/FlvProvider";
 
 export const MkP = () => {
 	
